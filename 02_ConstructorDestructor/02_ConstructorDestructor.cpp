@@ -108,42 +108,9 @@ public:
         cout << "Enter group name :";
         getline(cin, group_number);  
     }
-    void Show()
-    {
-        cout << "Name : " << name << endl;
-        cout << "Surname : " << surname << endl;
-        cout << "Lastname : " << lastname << endl;
-        cout << "Birthday  : " << birthday.day<<"/"<<birthday.month<<"/"<<birthday.year << endl;
-        cout << "Phone : " << phone << endl;
-        cout << "City : " << city << endl;
-        cout << "Country : " << country << endl;
-        cout << "University : " << unv_name << endl;
-        cout << "University city : " << unv_name_city << endl;
-        cout << "University country : " << unv_name_country << endl;
-        cout << "Number of group: " << group_number << endl;
-        cout << "Rating : " << average << endl;
-        cout << "Marks : ";
-        for (int i = 0; i < countMarks; i++)
-        {
-            cout << marks[i] << " ";
-        }
-        cout << endl;
-    }
-    void AddMark(int mark)
-    {
-        countMarks++;
-        int* temp = new int[countMarks];
-        for (int i = 0; i < countMarks-1; i++)
-        {
-            temp[i] = marks[i];
-        }
-        temp[countMarks - 1] = mark;
-        if (marks != nullptr)
-            delete[]marks;
-        marks = temp;
-        SetAverage();
+    void Show();
+    void AddMark(int mark);
 
-    }
     void setName(string name)
     {
         this->name = name;
@@ -272,3 +239,39 @@ int main()
 
 }
 
+inline void Student::Show()
+{
+    cout << "Name : " << name << endl;
+    cout << "Surname : " << surname << endl;
+    cout << "Lastname : " << lastname << endl;
+    cout << "Birthday  : " << birthday.day << "/" << birthday.month << "/" << birthday.year << endl;
+    cout << "Phone : " << phone << endl;
+    cout << "City : " << city << endl;
+    cout << "Country : " << country << endl;
+    cout << "University : " << unv_name << endl;
+    cout << "University city : " << unv_name_city << endl;
+    cout << "University country : " << unv_name_country << endl;
+    cout << "Number of group: " << group_number << endl;
+    cout << "Rating : " << average << endl;
+    cout << "Marks : ";
+    for (int i = 0; i < countMarks; i++)
+    {
+        cout << marks[i] << " ";
+    }
+    cout << endl;
+}
+void Student::AddMark(int mark)
+{
+    countMarks++;
+    int* temp = new int[countMarks];
+    for (int i = 0; i < countMarks - 1; i++)
+    {
+        temp[i] = marks[i];
+    }
+    temp[countMarks - 1] = mark;
+    if (marks != nullptr)
+        delete[]marks;
+    marks = temp;
+    SetAverage();
+
+}
