@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-inline void Hello()
-{
-	cout << "Hello world" << endl;
-}
 
 class Human
 {
@@ -79,9 +75,18 @@ public:
 
 };
  int Human::countHuman = 0;
+
+
+ inline void Hello()
+ {
+	 cout << "Hello world" << endl;
+ }
+
 int main()
 {
 
+	/*
+	
 	//cout << Human::countHuman << endl;
 	//Hello();
 	
@@ -96,15 +101,19 @@ int main()
 		Human h4("Yura", 10, 40);
 		///h4.Show();
 	}
-	
+	cout << sizeof(string) << endl;
+	cout << sizeof(Human) << endl;
+	cout << sizeof(h1) << endl;
+
+	*/
 	//cout << "Count of Human : "<<  Human::countHuman << endl;
 	/*cout << "Count of Human h1 : "<< h1.countHuman << endl;
 	cout << "Count of Human h2 : "<< h2.countHuman << endl;
 	cout << "Count of Human h3: "<< h3.countHuman << endl;*/
 	//cout << "Count of Human h4: "<< h4.countHuman << endl;
-	cout << "Count of Human h1 : "; h1.PrintCount() ;
+	/*cout << "Count of Human h1 : "; h1.PrintCount() ;
 	cout << "Count of Human h1 : " << h1.getStaticCount() << endl;
-	cout << "Count of Human : " << Human::getStaticCount() << endl;
+	cout << "Count of Human : " << Human::getStaticCount() << endl;*/
 	//cout << "Count of Human : " << Human::PrintCount() << endl;//error
 	/*
 	Human h5(100);
