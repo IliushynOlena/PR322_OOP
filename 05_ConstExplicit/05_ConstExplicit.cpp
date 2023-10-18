@@ -98,6 +98,7 @@ public:
         return sum;
     }
 };
+
 void doSomething(long number)
 {
 

@@ -39,6 +39,15 @@ public:
 
 		cout << "Paramerized Constructor [" << name << "]...\n";
 	}
+	Student(int age, string name)
+	{
+		this->name = name;
+		this->age = age;
+		this->marks = nullptr;
+		this->marksCount = 0;
+
+		cout << "Paramerized Constructor [" << name << "]...\n";
+	}
 	//copy constructor
 	Student(const Student & other)
 	{
