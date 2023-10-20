@@ -82,6 +82,14 @@ public:
 			}
 		}
 	}
+	Train operator++()//increment prefix form
+	{
+		for (int i = 0; i < number_of_wag; i++)
+		{
+			vagon[i].passengers++;
+		}
+		return *this;
+	}
 	Train(const Train& other)
 	{
 		this->model = other.model;
@@ -105,10 +113,48 @@ public:
 		}
 		return result;
 	}
+	Vagon GetVagon(int index)//71
+	{
+		if (index < 0 || index >= number_of_wag) return Vagon();
+		return vagon[index];
+	}
+	Vagon operator[](int index)//71
+	{
+		if (index < 0 || index >= number_of_wag) return Vagon();
+		return vagon[index];
+	}
+	void ChangePassanges(int count)
+	{
+		for (int i = 0; i < number_of_wag; i++)
+		{
+			vagon[i].passengers += count;
+		}
+	}
+	void operator()(int count)
+	{
+		for (int i = 0; i < number_of_wag; i++)
+		{
+			vagon[i].passengers += count;
+		}
+	}
+	void operator()(int count, int number)
+	{
+		for (int i = 0; i < number_of_wag; i++)
+		{
+			if(vagon[i].wag_number == number)
+				vagon[i].passengers += count;
+		}
+	}
+
 };
 
 int main() 
 {
+	int a = 5;
+	//istream cin;
+	cin >> a;
+	//ostream cout;
+	cout << a;
 
 	Train t1("Tomas");
 	Vagon v(1, 1, 2);
@@ -128,7 +174,27 @@ int main()
 	cout << "------------------------------------" << endl;
 	Train superTrain = t1 + t2; //t1.operator+(t2);
 	superTrain.Show();
+	cout << "------------------------------------" << endl;
+	(++superTrain).Show();
+	//superTrain.Show();
+	cout << "------------------------------------" << endl;
 
+	Vagon res = superTrain.GetVagon(71);
+	res.Show();
+
+	res = superTrain[2];
+	res.Show();
+
+	cout << "------------------------------------" << endl;
+	superTrain.ChangePassanges(10);
+	superTrain.Show();
+
+	superTrain(10);
+	superTrain.Show();
+
+	cout << "------------------------------------" << endl;
+	superTrain(100,1);
+	superTrain.Show();
 
 
 	return 0;
