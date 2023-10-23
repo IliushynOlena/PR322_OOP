@@ -94,9 +94,7 @@ public:
 			return false;*/
 
 		return (this->x + this->y) < (other.x + other.y);
-	}
-	
-	
+	}	
 	bool operator>= (const Point& other)const
 	{
 		return (this->x + this->y) >= (other.x + other.y);
@@ -143,7 +141,7 @@ public:
 	}
 	void setX(int x) { this->x = x; }
 	void setY(int y) { this->y = y; }
-	friend bool operator> (const Point& point1, const Point& point2);
+	friend bool operator > (const Point& point1, const Point& point2);
 	friend Point operator ++(Point& point);
 	friend ostream& operator << (ostream& out, const Point& point);
 	friend istream& operator >>(istream& in, Point& other);
@@ -185,9 +183,13 @@ int main() {
 
 	Point p2(5, 7);
 	Point p8(15, 71);
-
+	cout << p2;
 	cin >> p2 >> p8;
 	cout << p2 << p8 << endl;
+
+	int a = 3.33;//double -> int 3
+    // a = p2;
+
 
 	if (p2 > p8)
 	{

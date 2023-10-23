@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 struct Vagon
@@ -145,6 +146,20 @@ public:
 				vagon[i].passengers += count;
 		}
 	}
+	operator string()
+	{
+		/*string res = "";
+		for (int i = 0; i < number_of_wag; i++)
+		{
+			res += to_string(vagon[i].wag_number) + " ";
+		}
+		return res;*/
+		return model;
+	}
+	string ConvertToString()
+	{		
+		return model;
+	}
 
 };
 
@@ -152,9 +167,9 @@ int main()
 {
 	int a = 5;
 	//istream cin;
-	cin >> a;
+	//cin >> a;
 	//ostream cout;
-	cout << a;
+	//cout << a;
 
 	Train t1("Tomas");
 	Vagon v(1, 1, 2);
@@ -196,6 +211,9 @@ int main()
 	superTrain(100,1);
 	superTrain.Show();
 
+
+	cout << (string)superTrain << endl;
+	cout << superTrain.ConvertToString() << endl;
 
 	return 0;
 
