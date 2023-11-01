@@ -47,7 +47,6 @@ public:
 			//cycle queue
 			arr[top-1] = first;
 
-
 			return first;
 		}
 
