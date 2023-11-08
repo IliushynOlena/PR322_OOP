@@ -159,6 +159,38 @@ public:
 		
 	}
 };
+struct Vagon
+{
+	int wag_number;
+	int seats_number;
+	int passengers;
+	Vagon()
+	{
+		wag_number = 0;
+		seats_number = 0;
+		passengers = 0;
+	}
+	Vagon(int wag_number, int seats_number, int passengers)
+	{
+		this->wag_number = wag_number;
+		this->seats_number = seats_number;
+		this->passengers = passengers;
+	}
+	void Show()
+	{
+		cout << "Wagon number: " << wag_number << endl;
+		cout << "Amount of places: " << seats_number << endl;
+		cout << "Amount of passengers: " << passengers << endl << endl;
+	}
+};
+
+class Train
+{
+private:
+	string model;
+	int countVagons;
+	List<Vagon> vagons;
+};
 
 int main()
 {
