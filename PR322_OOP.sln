@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "16_Inheritance", "16_Inheri
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17_InheritancePolimorphism", "17_InheritancePolimorphism\17_InheritancePolimorphism.vcxproj", "{21D1AA70-69A4-44BF-B3AE-0F63417BB089}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_AbstractClass", "18_AbstractClass\18_AbstractClass.vcxproj", "{6116CF97-958A-46E7-BFCB-1250E16E6DBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{21D1AA70-69A4-44BF-B3AE-0F63417BB089}.Release|x64.Build.0 = Release|x64
 		{21D1AA70-69A4-44BF-B3AE-0F63417BB089}.Release|x86.ActiveCfg = Release|Win32
 		{21D1AA70-69A4-44BF-B3AE-0F63417BB089}.Release|x86.Build.0 = Release|Win32
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Debug|x64.ActiveCfg = Debug|x64
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Debug|x64.Build.0 = Debug|x64
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Debug|x86.ActiveCfg = Debug|Win32
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Debug|x86.Build.0 = Debug|Win32
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Release|x64.ActiveCfg = Release|x64
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Release|x64.Build.0 = Release|x64
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Release|x86.ActiveCfg = Release|Win32
+		{6116CF97-958A-46E7-BFCB-1250E16E6DBE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
