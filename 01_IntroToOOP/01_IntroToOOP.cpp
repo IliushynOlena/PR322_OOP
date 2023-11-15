@@ -75,7 +75,7 @@ public:
 //private:
 //public:
 //protected:
-class Student
+class Person
 {
 private:
 	string name;
@@ -118,7 +118,7 @@ public:
 int main()
 {
 	
-	Student st;
+	Person st;
 	st.setName("Stive");
 	st.setMark(2, 0);
 	st.setMark(12, 1);
@@ -142,7 +142,7 @@ int main()
 	cout << "Average mark : " << res << endl;
 	*/
 	//getAverage();
-	Student st2;
+	Person st2;
 	/*
 	Player pl;
 

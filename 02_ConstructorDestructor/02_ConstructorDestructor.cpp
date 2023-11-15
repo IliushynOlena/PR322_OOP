@@ -9,7 +9,7 @@ struct Date//public
     int year;
 };
 
-class Student//private
+class Person//private
 {
 private:
     string name;
@@ -37,7 +37,7 @@ private:
     }
 public:
     //ctor + TAB - constructor
-    Student()// default
+    Person()// default
     {
         cout << "Constructor " <<  endl;
         name = "no name";
@@ -55,7 +55,7 @@ public:
         countMarks = 0;
         average = 0;
     }
-    Student(string name, string surname, string lastname)
+    Person(string name, string surname, string lastname)
     {
         cout << "Constructor invocation...... " << endl;
         this->name = name;
@@ -202,7 +202,7 @@ public:
         return group_number;
     }
     //destructor
-    ~Student()
+    ~Person()
     {
         cout << "Destructor" << name << endl;
         if (marks != nullptr)
@@ -213,19 +213,19 @@ public:
 int main()
 {
     //cout << sizeof(Student) << endl;
-    Student st;//default constructor
+    Person st;//default constructor
     //st.Initialize();
     //st.InitFromKeyBoard();
     //st.setName("Olena");
     //st.setLastName("Iliushyn");
     st.Show();
 
-    Student st2;//default constructor
+    Person st2;//default constructor
     //st2.Initialize();
     //st2.setName("Bob");
     st2.Show();
 
-    Student st3("Oleg", "Vinnuk", "Mukolayovich");
+    Person st3("Oleg", "Vinnuk", "Mukolayovich");
     st3.AddMark(8);
     st3.AddMark(10);
     st3.AddMark(4);
@@ -239,7 +239,7 @@ int main()
 
 }
 
-inline void Student::Show()
+inline void Person::Show()
 {
     cout << "Name : " << name << endl;
     cout << "Surname : " << surname << endl;
@@ -260,7 +260,7 @@ inline void Student::Show()
     }
     cout << endl;
 }
-void Student::AddMark(int mark)
+void Person::AddMark(int mark)
 {
     countMarks++;
     int* temp = new int[countMarks];

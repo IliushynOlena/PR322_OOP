@@ -79,11 +79,11 @@ public:
 		int maxSpeed, int hoursePower, int turbo) : turbo(turbo), Car(mark, model,
 			year, volume, type, maxSpeed, hoursePower) {}
 
-	void Drive()const override
+	void Drive()const  override
 	{
 		cout << " I am a Sport Car! I can drive with speed " << maxSpeed << "km/h" << endl;
 	}
-	void Print()const override
+	void Print()const 
 	{
 		Car::Print();
 		cout << "Turbo  " << turbo << endl;
@@ -117,11 +117,13 @@ void main()
 
 	SportCar sport("Porcshe", "911", 2022, 2.5, "petrol", 320, 500, 40);
 	sport.Drive();
+	sport.Print();
 
 	TestDrive(simpleCar);
 	TestDrive(police);
 	TestDrive(sport);
 
+	/*
 	Car* carSalon[3]
 	{
 		new Car("Daewoo", "Lanos", 2010, 1.5, "petrol", 100, 75),
@@ -138,7 +140,7 @@ void main()
 	{
 		delete carSalon[i];
 	}
-
+	*/
 	//p.Drive();
 
 
