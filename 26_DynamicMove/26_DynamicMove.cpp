@@ -107,25 +107,28 @@ public:
 
     void PrintHero()const
     {
+        //system("Color 0A");
         SetConsoleTextAttribute(hConsole, ConsoleColors::GREEN);
         Print(symbol);
     }
     void MarkHero()const
     {
+        //system("Color 4A");
         SetConsoleTextAttribute(hConsole, ConsoleColors::RED);
         Print(symbol);
     }
     void ClearHero()const
     {
+        //system("Color 00");
         SetConsoleTextAttribute(hConsole, ConsoleColors::BLACK);
         Print((char)219);
     }
 };
 
+
 int main()
 {
-
-    //system("Color 2A");
+    system("Color 0A");
     hidecursor();
     Hero hero("Bill", 4, 8, (char)219);
     hero.ShowInfo();
